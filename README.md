@@ -66,8 +66,11 @@ The model is trained for 300 epochs. The training flow includes:
  
 ## Results
 During training, the Generators improve their ability to produce realistic MRI images with each epoch. The project includes a GIF to visualize the progression of generated images over time.
+Below is a GIF illustrating the progression of generated images over time:
+(https://github.com/bshivagunde/MRI-Image-Contrast-Generation-using-CycleGAN/blob/main/MRI_cyclegan.gif)
 
 ## Conclusion
 This project successfully demonstrates how deep learning can be used to enhance medical imaging by generating additional MRI image variations. This approach has the potential to reduce costs and improve diagnostic accuracy in clinical settings.
 
-
+## Contact
+Created by [@bshivagunde](https://github.com/bshivagunde) - Feel free to contact me!
