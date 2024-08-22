@@ -20,10 +20,10 @@ The task is to build a Generative Adversarial Model (CycleGAN with a modified U-
 ## Dependencies
 The project requires the following Python libraries:
 
- -- numpy==1.19.2
- -- tensorflow==2.4.1
- -- matplotlib==3.3.2
- -- skimage==0.17.2
+ - numpy==1.19.2
+ - tensorflow==2.4.1
+ - matplotlib==3.3.2
+ - skimage==0.17.2
  
 ## Data
 The dataset comprises MRI images in T1 and T2 contrast levels:
@@ -38,4 +38,36 @@ The dataset comprises MRI images in T1 and T2 contrast levels:
  - Reshaping: Reshape images to (128, 128, 1) and normalize pixel values.
  - Batching and Shuffling: Batch size is set to 1024 for efficient training. 
  
+## Model Architecture
+### Generator
+The Generator is based on a modified U-Net architecture, which performs the following steps:
+
+ - Downsampling: Extracts features from the input image.
+ - Upsampling: Reconstructs the image with the desired contrast level.
  
+### Discriminator
+The Discriminator is a traditional Convolutional Neural Network (CNN) used to classify real and generated images. It uses downsampling layers for feature extraction.
+
+### Loss Functions
+ - Binary Cross-Entropy: Used for classification in the Discriminator.
+ - Cycle Loss: L1 loss between the original and cycled image.
+ - Identity Loss: L1 loss between the input and output when no translation is needed.
+ 
+### Optimizer
+ - Adam Optimizer: Used to update model weights efficiently.
+ 
+## Model Training
+The model is trained for 300 epochs. The training flow includes:
+
+ 1. Generating fake images and cycled images.
+ 2. Calculating Discriminator and Generator losses.
+ 3. Updating weights using the Adam Optimizer.
+ 4. Saving model checkpoints for future use.
+ 
+## Results
+During training, the Generators improve their ability to produce realistic MRI images with each epoch. The project includes a GIF to visualize the progression of generated images over time.
+
+## Conclusion
+This project successfully demonstrates how deep learning can be used to enhance medical imaging by generating additional MRI image variations. This approach has the potential to reduce costs and improve diagnostic accuracy in clinical settings.
+
+
