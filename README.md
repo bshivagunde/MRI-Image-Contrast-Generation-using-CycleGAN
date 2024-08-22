@@ -33,6 +33,10 @@ The dataset comprises MRI images in T1 and T2 contrast levels:
  - Image Size: 217x181 pixels
  - The images should be resized and reshaped to 128x128 pixels for model input. 
  
+ T1 Sample Image ![](https://github.com/bshivagunde/MRI-Image-Contrast-Generation-using-CycleGAN/blob/main/T1%20Sample%20Image.png)
+ 
+ T2 Sample Image ![](https://github.com/bshivagunde/MRI-Image-Contrast-Generation-using-CycleGAN/blob/main/T2%20Sample%20Image.png)
+ 
 ## Data Preprocessing
  - Resizing: Resize images to 128x128 pixels.
  - Reshaping: Reshape images to (128, 128, 1) and normalize pixel values.
